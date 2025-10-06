@@ -6,7 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		117E21FE2E942B4D00C96685 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F1D3FE2E936C9D008E5DB4 /* WidgetKit.framework */; };
+		117E21FF2E942B4D00C96685 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F1D4002E936C9D008E5DB4 /* SwiftUI.framework */; };
+		117E22102E942B4F00C96685 /* quote-widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 117E21FD2E942B4D00C96685 /* quote-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		117E220E2E942B4F00C96685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F1D3C62E9369EB008E5DB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117E21FC2E942B4D00C96685;
+			remoteInfo = "quote-widgetExtension";
+		};
 		11F1D3DC2E9369EE008E5DB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 11F1D3C62E9369EB008E5DB4 /* Project object */;
@@ -23,13 +36,49 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		11F1D4172E936C9F008E5DB4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				117E22102E942B4F00C96685 /* quote-widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		117E21FD2E942B4D00C96685 /* quote-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "quote-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C43F252E94730000904272 /* quote-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "quote-widgetExtension.entitlements"; sourceTree = "<group>"; };
 		11F1D3CE2E9369EC008E5DB4 /* bronivate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bronivate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1D3DB2E9369EE008E5DB4 /* bronivateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bronivateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1D3E52E9369EE008E5DB4 /* bronivateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bronivateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F1D3FE2E936C9D008E5DB4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		11F1D4002E936C9D008E5DB4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		117E22112E942B4F00C96685 /* Exceptions for "quote-widget" folder in "quote-widgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 117E21FC2E942B4D00C96685 /* quote-widgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		117E22002E942B4D00C96685 /* quote-widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				117E22112E942B4F00C96685 /* Exceptions for "quote-widget" folder in "quote-widgetExtension" target */,
+			);
+			path = "quote-widget";
+			sourceTree = "<group>";
+		};
 		11F1D3D02E9369EC008E5DB4 /* bronivate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = bronivate;
@@ -48,6 +97,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		117E21FA2E942B4D00C96685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117E21FF2E942B4D00C96685 /* SwiftUI.framework in Frameworks */,
+				117E21FE2E942B4D00C96685 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11F1D3CB2E9369EC008E5DB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,9 +133,12 @@
 		11F1D3C52E9369EB008E5DB4 = {
 			isa = PBXGroup;
 			children = (
+				11C43F252E94730000904272 /* quote-widgetExtension.entitlements */,
 				11F1D3D02E9369EC008E5DB4 /* bronivate */,
 				11F1D3DE2E9369EE008E5DB4 /* bronivateTests */,
 				11F1D3E82E9369EE008E5DB4 /* bronivateUITests */,
+				117E22002E942B4D00C96685 /* quote-widget */,
+				11F1D3FD2E936C9D008E5DB4 /* Frameworks */,
 				11F1D3CF2E9369EC008E5DB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,13 +149,45 @@
 				11F1D3CE2E9369EC008E5DB4 /* bronivate.app */,
 				11F1D3DB2E9369EE008E5DB4 /* bronivateTests.xctest */,
 				11F1D3E52E9369EE008E5DB4 /* bronivateUITests.xctest */,
+				117E21FD2E942B4D00C96685 /* quote-widgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		11F1D3FD2E936C9D008E5DB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11F1D3FE2E936C9D008E5DB4 /* WidgetKit.framework */,
+				11F1D4002E936C9D008E5DB4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		117E21FC2E942B4D00C96685 /* quote-widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117E22122E942B4F00C96685 /* Build configuration list for PBXNativeTarget "quote-widgetExtension" */;
+			buildPhases = (
+				117E21F92E942B4D00C96685 /* Sources */,
+				117E21FA2E942B4D00C96685 /* Frameworks */,
+				117E21FB2E942B4D00C96685 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				117E22002E942B4D00C96685 /* quote-widget */,
+			);
+			name = "quote-widgetExtension";
+			packageProductDependencies = (
+			);
+			productName = "quote-widgetExtension";
+			productReference = 117E21FD2E942B4D00C96685 /* quote-widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		11F1D3CD2E9369EC008E5DB4 /* bronivate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F1D3EF2E9369EE008E5DB4 /* Build configuration list for PBXNativeTarget "bronivate" */;
@@ -102,10 +195,12 @@
 				11F1D3CA2E9369EC008E5DB4 /* Sources */,
 				11F1D3CB2E9369EC008E5DB4 /* Frameworks */,
 				11F1D3CC2E9369EC008E5DB4 /* Resources */,
+				11F1D4172E936C9F008E5DB4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				117E220F2E942B4F00C96685 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				11F1D3D02E9369EC008E5DB4 /* bronivate */,
@@ -173,6 +268,9 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					117E21FC2E942B4D00C96685 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 					11F1D3CD2E9369EC008E5DB4 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -203,11 +301,19 @@
 				11F1D3CD2E9369EC008E5DB4 /* bronivate */,
 				11F1D3DA2E9369EE008E5DB4 /* bronivateTests */,
 				11F1D3E42E9369EE008E5DB4 /* bronivateUITests */,
+				117E21FC2E942B4D00C96685 /* quote-widgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		117E21FB2E942B4D00C96685 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11F1D3CC2E9369EC008E5DB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +338,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		117E21F92E942B4D00C96685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11F1D3CA2E9369EC008E5DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +369,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		117E220F2E942B4F00C96685 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117E21FC2E942B4D00C96685 /* quote-widgetExtension */;
+			targetProxy = 117E220E2E942B4F00C96685 /* PBXContainerItemProxy */;
+		};
 		11F1D3DD2E9369EE008E5DB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 11F1D3CD2E9369EC008E5DB4 /* bronivate */;
@@ -269,6 +387,68 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		117E22132E942B4F00C96685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "quote-widgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67QJ56465B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "quote-widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "quote-widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asehm.bronivate.motivate-quote-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		117E22142E942B4F00C96685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "quote-widgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67QJ56465B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "quote-widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "quote-widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asehm.bronivate.motivate-quote-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		11F1D3ED2E9369EE008E5DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,8 +573,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bronivate/bronivate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67QJ56465B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -424,8 +606,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bronivate/bronivate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67QJ56465B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -533,6 +717,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		117E22122E942B4F00C96685 /* Build configuration list for PBXNativeTarget "quote-widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117E22132E942B4F00C96685 /* Debug */,
+				117E22142E942B4F00C96685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		11F1D3C92E9369EB008E5DB4 /* Build configuration list for PBXProject "bronivate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
