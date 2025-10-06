@@ -38,25 +38,31 @@ struct Provider: AppIntentTimelineProvider {
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
         var entries: [SimpleEntry] = []
 
+        let calendar = Calendar.current
         let currentDate = Date()
+
+        // Load quotes from App Group
         let quotes = UserDefaults(suiteName: "group.motivational_quotes")
-        let savedQuote: [String] = quotes?.stringArray(forKey: "quotes") ?? ["ERROR: No quotes recieved in timeline"]
-        let today = Calendar.current.startOfDay(for: Date())
+        let savedQuote: [String] = quotes?.stringArray(forKey: "quotes") ?? ["ERROR: No quotes received"]
+
+        // Pick quote of the day deterministically
+        let today = calendar.startOfDay(for: currentDate)
         let seed = UInt64(today.timeIntervalSince1970)
-        
         var generator = SeededGenerator(seed: seed)
         let quoteOfTheDay = savedQuote.randomElement(using: &generator)!
 
-        for hourOffset in 0..<5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            var config = configuration
-            config.currentQuote = quoteOfTheDay
-            entries.append(SimpleEntry(date: entryDate, configuration: config))
-        }
+        // Assign quote to App Intent parameter
+        var config = configuration
+        config.currentQuote = quoteOfTheDay
+        // Create timeline entry
+        let entry = SimpleEntry(date: currentDate, configuration: config)
+        entries.append(entry)
 
-        return Timeline(entries: entries, policy: .atEnd)
+        // Schedule next refresh at the start of the next day
+        let nextRefresh = calendar.date(byAdding: .hour, value: 2, to: today)!
+
+        return Timeline(entries: entries, policy: .after(nextRefresh))
     }
-
 
 //    func relevances() async -> WidgetRelevances<ConfigurationAppIntent> {
 //        // Generate a list containing the contexts this widget is relevant in.
@@ -68,14 +74,34 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationAppIntent
 }
 
-struct quote_widgetEntryView : View {
+struct quote_widgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Todays Quote:")
-            Text(entry.configuration.currentQuote ?? "Error: quote_widgetEntryView")
+        ZStack {
+            // Background (optional)
+            Color.clear
+
+            // Quote centered
+            Text(entry.configuration.currentQuote ?? "No Quote")
+                .multilineTextAlignment(.center)
+                .font(.headline)
+                .padding(.horizontal)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+
+            // Bronivate at the bottom
+            VStack {
+                Spacer()
+                Text("Bronivate")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .padding(.bottom, 8)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity,
+                           alignment: .bottom)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .padding()
     }
 }
 
