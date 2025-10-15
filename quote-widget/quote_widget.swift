@@ -47,19 +47,19 @@ struct Provider: AppIntentTimelineProvider {
 
         // Pick quote of the day deterministically
         let today = calendar.startOfDay(for: currentDate)
-        let seed = UInt64(today.timeIntervalSince1970)
+        let seed = UInt64(today.timeIntervalSince1970) + UInt64(calendar.component(.hour, from: currentDate))
         var generator = SeededGenerator(seed: seed)
         let quoteOfTheDay = savedQuote.randomElement(using: &generator)!
 
         // Assign quote to App Intent parameter
-        var config = configuration
+        let config = configuration
         config.currentQuote = quoteOfTheDay
         // Create timeline entry
         let entry = SimpleEntry(date: currentDate, configuration: config)
         entries.append(entry)
 
         // Schedule next refresh at the start of the next day
-        let nextRefresh = calendar.date(byAdding: .hour, value: 2, to: today)!
+        let nextRefresh = calendar.date(byAdding: .hour, value: 4, to: today)!
 
         return Timeline(entries: entries, policy: .after(nextRefresh))
     }
@@ -99,7 +99,6 @@ struct quote_widgetEntryView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity,
                            alignment: .bottom)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding()
     }
