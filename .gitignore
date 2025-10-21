@@ -65,3 +65,5 @@ bronivate-firebase-adminsdk-fbsvc-*
 add to db.py
 GoogleService-Info.plist
 Package.resolved
+bronivateFirestoreAPI.json
+

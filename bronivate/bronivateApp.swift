@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct bronivateApp: App {
-    let quotesArray: [String] = [" I love Lebron", "I like criticism. It makes you strong",
+    let quotesArray: [String] = ["I like criticism. It makes you strong",
                                  "Love Yourz", "Whatever you gon do, don't do it partially",
                                  "Something just doesn't pop under your nose; you have to work for it",
                                  "You can't be afraid to fail. It's the only way you succeed",

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BronivateApi", "BronivateApi.csproj", "{15003A35-C090-355A-61ED-BD6169B342B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15003A35-C090-355A-61ED-BD6169B342B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15003A35-C090-355A-61ED-BD6169B342B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15003A35-C090-355A-61ED-BD6169B342B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15003A35-C090-355A-61ED-BD6169B342B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DE7192F-32FD-419A-90AE-47B322A62B27}
+	EndGlobalSection
+EndGlobal
