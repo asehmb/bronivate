@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BronivateApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83faf4a4bc85e7db23b7f1079e5b4350a8442141")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fc7eba0701f7fa941fe6eba8c51e8ae93d11c1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BronivateApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BronivateApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

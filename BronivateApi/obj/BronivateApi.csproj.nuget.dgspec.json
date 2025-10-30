@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/asehm/projects/bronivate/BronivateApi/BronivateApi.csproj": {}
+    "/Users/asehmb/projects/bronivate/BronivateApi/BronivateApi.csproj": {}
   },
   "projects": {
-    "/Users/asehm/projects/bronivate/BronivateApi/BronivateApi.csproj": {
+    "/Users/asehmb/projects/bronivate/BronivateApi/BronivateApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/asehm/projects/bronivate/BronivateApi/BronivateApi.csproj",
+        "projectUniqueName": "/Users/asehmb/projects/bronivate/BronivateApi/BronivateApi.csproj",
         "projectName": "BronivateApi",
-        "projectPath": "/Users/asehm/projects/bronivate/BronivateApi/BronivateApi.csproj",
-        "packagesPath": "/Users/asehm/.nuget/packages/",
-        "outputPath": "/Users/asehm/projects/bronivate/BronivateApi/obj/",
+        "projectPath": "/Users/asehmb/projects/bronivate/BronivateApi/BronivateApi.csproj",
+        "packagesPath": "/Users/asehmb/.nuget/packages/",
+        "outputPath": "/Users/asehmb/projects/bronivate/BronivateApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/asehm/.nuget/NuGet/NuGet.Config"
+          "/Users/asehmb/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -36,14 +36,18 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Google.Cloud.Firestore": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.10, )"
@@ -72,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/asehmb/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
